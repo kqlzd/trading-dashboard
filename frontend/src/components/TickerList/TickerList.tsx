@@ -1,3 +1,3 @@
 export const TickerList = () => {
-  return <div>Tickerlist</div>;
+  return <div>Tickerlist-{}</div>;
 };
