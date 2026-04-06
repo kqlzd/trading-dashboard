@@ -1,6 +1,13 @@
 import { Box, Text, VStack } from "@chakra-ui/react";
 
-export const TickerList = ({ tickers, prices, selected, onSelect }: any) => {
+interface IProps {
+  tickers: string[];
+  prices: any;
+  selected: string;
+  onSelect: (ticker: string) => void;
+}
+
+export const TickerList = ({ tickers, prices, selected, onSelect }: IProps) => {
   return (
     <VStack gap={2} align="stretch" p={4} w="200px">
       <Text fontWeight="bold" fontSize="lg">
