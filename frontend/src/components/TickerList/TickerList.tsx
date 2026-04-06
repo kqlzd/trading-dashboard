@@ -1,3 +1,3 @@
-export default function TickerList() {
+export const TickerList = () => {
   return <div>Tickerlist</div>;
-}
+};
