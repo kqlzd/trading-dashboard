@@ -8,7 +8,17 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export const PriceChart = ({ ticker, data }: any) => {
+interface IDataPoint {
+  time: string;
+  price: number;
+}
+
+type TProps = {
+  ticker: string;
+  data: IDataPoint[];
+};
+
+export const PriceChart = ({ ticker, data }: TProps) => {
   const formatted = data.map((d: any) => ({
     time: new Date(d.time).toLocaleTimeString(),
     price: d.price,
