@@ -19,7 +19,7 @@ type TProps = {
 };
 
 export const PriceChart = ({ ticker, data }: TProps) => {
-  const formatted = data.map((d: any) => ({
+  const formatted = data.map((d) => ({
     time: new Date(d.time).toLocaleTimeString(),
     price: d.price,
   }));
