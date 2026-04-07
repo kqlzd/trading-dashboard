@@ -22,7 +22,7 @@ export const Homepage = () => {
   }, [selected]);
 
   return (
-    <Flex h="100vh">
+    <Flex h="100vh" direction={{ base: "column", md: "row" }}>
       <TickerList
         tickers={tickers}
         prices={prices}
