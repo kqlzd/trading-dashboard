@@ -1,10 +1,10 @@
 import { Flex } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
-import { fetchTickers, fetchHistory } from "../services/api";
-import { useWebSocket } from "../hooks/useWebSocket";
-import { TickerList } from "../components/TickerList/TickerList";
-import { PriceChart } from "../components/PriceList/PriceList";
+import { fetchTickers, fetchHistory } from "../../services/api";
+import { useWebSocket } from "../../hooks/useWebSocket";
+import { TickerList } from "../../components/TickerList/TickerList";
+import { PriceChart } from "../../components/PriceList/PriceList";
 
 export const Homepage = () => {
   const [tickers, setTickers] = useState<string[]>([]);
