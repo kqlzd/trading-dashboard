@@ -9,7 +9,7 @@ interface IProps {
 
 export const TickerList = ({ tickers, prices, selected, onSelect }: IProps) => {
   return (
-    <VStack gap={2} align="stretch" p={4} w="200px">
+    <VStack gap={2} align="stretch" p={4} w={{ base: "100%", md: "200px" }}>
       <Text fontWeight="bold" fontSize="lg">
         Tickers
       </Text>
