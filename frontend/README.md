@@ -6,6 +6,7 @@ Real-time trading dashboard with live ticker prices and interactive charts.
 
 - **Backend:** Node.js, TypeScript, Express, WebSocket
 - **Frontend:** React, TypeScript, Chakra UI, Recharts
+- **UI Library:** Chakra UI v3
 
 ## Getting Started
 
@@ -47,8 +48,12 @@ npm start
 - Redis caching replaced with in-memory caching for simplicity
 
 ## Running Tests
-
 ```bash
 cd frontend
 npm test
 ```
+
+Test coverage:
+- Homepage component render test
+- PriceList component render test
+- TickerList component render test
