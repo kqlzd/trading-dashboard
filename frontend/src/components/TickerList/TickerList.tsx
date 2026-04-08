@@ -2,7 +2,7 @@ import { Box, Text, VStack } from "@chakra-ui/react";
 
 interface IProps {
   tickers: string[];
-  prices: any;
+  prices: Record<string, number>;
   selected: string;
   onSelect: (ticker: string) => void;
 }

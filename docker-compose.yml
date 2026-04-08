@@ -5,10 +5,22 @@ services:
     build: ./backend
     ports:
       - "3001:3001"
+    healthcheck:
+      test:
+        ["CMD", "wget", "--spider", "-q", "http://localhost:3001/api/tickers"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
 
   frontend:
     build: ./frontend
     ports:
       - "3000:3000"
+    environment:
+      - REACT_APP_WS_URL=ws://localhost:3001
+      - REACT_APP_API_URL=http://localhost:3001
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
