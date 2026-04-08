@@ -13,6 +13,7 @@ Real-time trading dashboard with live ticker prices and interactive charts.
 ### Prerequisites
 
 - Node.js 18+
+- Docker Desktop
 
 ### Run Locally
 
@@ -32,6 +33,21 @@ npm install
 npm start
 ```
 
+### Run with Docker
+
+```bash
+docker compose up --build
+```
+
+- Frontend: http://localhost:3000
+- Backend: http://localhost:3001
+
+**Stop:**
+
+```bash
+docker compose down
+```
+
 ## API Endpoints
 
 | Method | Endpoint                       | Description        |
@@ -48,12 +64,14 @@ npm start
 - Redis caching replaced with in-memory caching for simplicity
 
 ## Running Tests
+
 ```bash
 cd frontend
 npm test
 ```
 
 Test coverage:
+
 - Homepage component render test
 - PriceList component render test
 - TickerList component render test
